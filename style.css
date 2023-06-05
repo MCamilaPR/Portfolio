@@ -1,0 +1,51 @@
+/* global */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.container {
+  border: solid blue 3px;
+  /* width: calc(100% - 200px); max-width: 1000px; */
+  width: min(70rem, 100% - 2rem);
+  /* margin-left: auto; margin-right: auto; */
+  margin-inline: auto;
+}
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#my-name {
+  font-size: 18px;
+}
+/* intro */
+#intro {
+  text-align: center;
+  /*padding-top: 100px;
+padding-bottom: 100px;*/
+  padding-block: 100px;
+}
+#intro > h1 {
+  font-size: clamp(1.25rem, calc(0.9rem + 1.74vw), 2.25rem);
+}
+/*skills*/
+#skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+@media (min-width: 767px) {
+  #skills {
+    display: flex;
+  }
+}
