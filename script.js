@@ -20,7 +20,7 @@ navLinks.forEach((link) => {
   });
 });
 
-fetch("https://api.github.com/users/diegot-code/repos")
+fetch("https://api.github.com/users/MCamilaPR/repos")
   .then((response) => response.json())
   .then((data) => {
     //limit the number to 6
