@@ -5,7 +5,7 @@
 :root {
   --bgcolor: white;
   --bgcolor-dark: #0b192f;
-  --primary: #bf6eddad;
+  --primary: #bb5bdefa;
   --primary-muted: #5c3a645e;
   --secondary: limegreen;
   --blue: rgb(74, 174, 255);
@@ -16,16 +16,19 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 40px;
 }
 
 * {
   box-sizing: border-box;
 }
+h3 {
+  margin: 0;
+}
 body {
   margin: 0;
   background-color: var(--bgcolor);
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 1000px;
 }
 p {
   margin: 0;
@@ -265,6 +268,7 @@ h1 {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: nowrap;
   gap: 30px;
 }
 @media (min-width: 34rem) {
@@ -288,7 +292,7 @@ h1 {
 }
 @media (min-width: 46rem) {
   #reposContainer {
-    grid-template-columns: 1fr 1 fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -297,7 +301,7 @@ h1 {
   padding: 14px 20px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1 fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: max-content auto max-content max-content;
   gap: 10px 30px;
 
@@ -353,12 +357,22 @@ h1 {
 }
 
 /*Portfolio*/
+#portfolio {
+  padding-block: 40px 80px;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  /*grit-template-columns: minmax(0, 1fr);*/
+  grit-template-columns: minmax(0, 1fr);
   gap: 40px;
 }
+
+@media (min-width: 30rem) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
 .grid-container img {
   aspect-ratio: 1.4;
   object-fit: cover;
@@ -420,11 +434,44 @@ article li {
   border-radius: 30px;
 }
 
+/* CTA */
+#cta .container {
+  background-color: var(--primary);
+  padding: 40px 60px 50px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: -80px;
+  position: relative;
+}
+
+#cta img {
+  width: 60px;
+}
+#cta a {
+  display: inline-flex;
+  background-color: white;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: var(--aqua) solid 2px;
+  color: var(--aqua);
+  font-weight: 600;
+  margin-inline: 4px;
+  margin-top: 20px;
+}
+
+#cta i {
+  font-size: 20px;
+}
+
 /*footer*/
 footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  padding-block: 10px;
+  padding-block: 140px 50px;
 }
